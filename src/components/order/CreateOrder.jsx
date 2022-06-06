@@ -38,9 +38,6 @@ export default function CreateOrder(){
     return (
         <>
         <h3>Welcome, Please Enter Your Order Below</h3>
-        <br></br>
-        <br></br>
-        <br></br>
         <input placeholder="Enter Menu Item" ref={menu_itemInput}></input>
         <br></br>
         <input placeholder="Enter A Comment" ref={m_commentInput}></input>

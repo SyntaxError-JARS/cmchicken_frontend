@@ -1,29 +1,29 @@
 import axios from "axios";
-import { useRef, useState } from "react";
+import { useState } from "react";
 
-export default function ViewOrders(){
+export default function ViewOrder(){
 
     const [orderBody, setOrderBody] = useState();
 
   
 
-    const url = " "
+    const url = " http://localhost:8080/cmChicken"
 
     async function viewAllOrders(){
         
         try{
             
-            const response = await axios.get(`${url}/orders`, orderBody)
+            const response = await axios.get(`${url}/menuorders`, orderBody)
             const orders = await response.data;
             const menuItemsTableRows = orders.map((e) => {
             return (
                 <tr>
                     <td>{e.id}</td>
-                    <td>{e.menu_item}</td>
+                    <td>{e.menu_item.item_name}</td>
                     <td>{e.m_comment}</td>
                     <td>{String(e.is_favorite)}</td>
                     <td>{e.order_date}</td>
-                    <td>{e.customer_username}</td>
+                    <td>{e.customer_username.username}</td>
                 </tr>
             )
            

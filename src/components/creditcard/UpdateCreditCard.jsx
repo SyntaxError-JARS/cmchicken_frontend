@@ -13,7 +13,7 @@ export default function UpdateCreditCard(){
      const customer_usernameInput = useRef();
    
 
-    const url = "http://localhost:8080/cmChicken/creditcard/"
+    const url = "http://localhost:8080/cmChicken/"
 
     async function updateCredit(){
 
@@ -41,9 +41,6 @@ export default function UpdateCreditCard(){
     return(
     <>
     <h3>Please update payment information below</h3>
-        <br></br>
-        <br></br>
-        <br></br>
         <input placeholder="Enter card number" ref={cc_numberInput}></input>
         <br></br>
         <input placeholder="Enter name on card" ref={cc_nameInput}></input>

@@ -46,9 +46,6 @@ export default function AddCreditCard(){
     <>
     
         <h3>Please Enter Your Credit Card Information Below</h3>
-        <br></br>
-        <br></br>
-        <br></br>
         <input placeholder="Enter card number" ref={cc_numberInput}></input>
         <br></br>
         <input placeholder="Enter name on card" ref={cc_nameInput}></input>
