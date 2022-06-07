@@ -28,7 +28,7 @@ export default function CustomerUpdate(){
 
         
         try{
-        const response = await axios.post(`${url}/customer` , customer)
+        const response = await axios.put(`${url}/customer` , customer)
         console.log(response)
         } catch(error){
             console.error(error.response.data)

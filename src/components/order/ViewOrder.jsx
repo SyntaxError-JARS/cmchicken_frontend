@@ -13,7 +13,7 @@ export default function ViewOrder(){
         
         try{
             
-            const response = await axios.get(`${url}/menuorders`, orderBody)
+            const response = await axios.get(`${url}/menuorder`, orderBody)
             const orders = await response.data;
             const menuItemsTableRows = orders.map((e) => {
             return (

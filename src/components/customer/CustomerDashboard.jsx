@@ -1,7 +1,7 @@
 
 import AddCreditCard from "../creditcard/AddCreditCard";
 import DeleteCreditCard from "../creditcard/DeleteCreditCard";
-import UpdateCreditCard from "../creditcard/UpdateCreditCard";
+
 import CreateOrder from "../order/CreateOrder";
 import ViewOrder from "../order/ViewOrder";
 import CustomerDelete from "./CustomerDelete";
@@ -15,7 +15,7 @@ export default function CustomerDashboard(){
         {/* <CustomerNavBar /> */}
         <h1>Hello customer</h1>
             <AddCreditCard />
-            <UpdateCreditCard />
+            
             <DeleteCreditCard />
             <CreateOrder />
             <br></br>

@@ -1,12 +1,13 @@
 import axios from "axios";
 import { useRef } from "react"
-
+import { userContext } from "../../App";
 
 export default function DeleteMenuItem(){
 
     
 
     const menuItemInput = useRef();
+    const [user, setUser] = useContext(userContext);
 
 
     const url = "http://localhost:8080/cmChicken"

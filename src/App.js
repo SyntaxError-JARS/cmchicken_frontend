@@ -1,3 +1,4 @@
+import { createContext, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AdminDashboard from "./components/Admin/AdminDashboard.jsx";
 import AddCreditCard from "./components/creditcard/AddCreditCard";
@@ -17,13 +18,18 @@ import CreateOrder from "./components/order/CreateOrder.jsx";
 import ViewOrder from "./components/order/ViewOrder.jsx";
 import Welcome from "./components/Welcome";
 
+export const userContext = createContext();
+
 function App() {
+
+  const [user, setUser] = useState({ username: "Guest" });
   return (
     <>
     <BrowserRouter>
-      <NavBar/>
-         <Routes>
-           <Route exact path=""element={<Welcome/>}/>
+      <userContext.Provider value={[user, setUser]}>
+        <NavBar/>
+          <Routes>
+            <Route exact path=""element={<Welcome/>}/>
             <Route path="view-menu"element={<MenuItem/>}/>
             <Route path="create-menu"element={<CreateMenuItem/>}/>
             <Route path="add-card" element={<AddCreditCard />} />
@@ -41,14 +47,9 @@ function App() {
             <Route path="update-card" element={<UpdateCreditCard />} />
             <Route path="delete-account" element={<CustomerDelete />} />
             <Route path="update-account" element={<CustomerUpdate />} />
-
-
-
-
-
          </Routes>
-        
-        
+      
+      </userContext.Provider>
     </BrowserRouter>    
     </>
   );

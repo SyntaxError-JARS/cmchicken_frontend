@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import axios from 'axios';
-
+import { userContext } from "../../App";
 
 export default function UpdateMenu(){
 
@@ -8,6 +8,7 @@ export default function UpdateMenu(){
     const priceInput= useRef();
     const proteinInput = useRef();
     const is_substitutableInput = useRef();
+    const [user, setUser] = useContext(userContext);
    
 
     const url = "http://localhost:8080/cmChicken"

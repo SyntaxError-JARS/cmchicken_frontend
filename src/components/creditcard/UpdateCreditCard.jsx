@@ -29,7 +29,7 @@ export default function UpdateCreditCard(){
         }
         
         try{
-        const response = await axios.post(`${url}/creditcard/update` , Credit)
+        const response = await axios.put(`${url}/creditcard` , Credit)
        
         console.log(response)
         } catch(error){
